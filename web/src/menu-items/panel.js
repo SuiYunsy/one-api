@@ -77,14 +77,14 @@ const panel = {
       icon: icons.IconKey,
       breadcrumbs: false
     },
-    {
-      id: 'playground',
-      title: 'Playground',
-      type: 'item',
-      url: '/panel/playground',
-      icon: icons.IconBallFootball,
-      breadcrumbs: false
-    },
+    // {
+    //   id: 'playground',
+    //   title: 'Playground',
+    //   type: 'item',
+    //   url: '/panel/playground',
+    //   icon: icons.IconBallFootball,
+    //   breadcrumbs: false
+    // },
     {
       id: 'log',
       title: '日志',

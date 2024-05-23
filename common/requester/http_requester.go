@@ -170,6 +170,11 @@ func (r *HTTPRequester) WithHeader(header map[string]string) requestOption {
 		for k, v := range header {
 			args.header.Set(k, v)
 		}
+		// "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
+		// 如果 User-Agent 为空，或者 User-Agent 为 Go-http-client/2.0 或 Go-http-client/1.1 或 Go-http-client/1.0，就替换为下面的 User-Agent
+		if args.header.Get("User-Agent") == "" || args.header.Get("User-Agent") == "Go-http-client/2.0" || args.header.Get("User-Agent") == "Go-http-client/1.1" || args.header.Get("User-Agent") == "Go-http-client/1.0" {
+			args.header.Set("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36")
+		}
 	}
 }
 

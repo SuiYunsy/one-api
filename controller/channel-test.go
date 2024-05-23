@@ -79,11 +79,11 @@ func buildTestRequest() *types.ChatCompletionRequest {
 		Messages: []types.ChatCompletionMessage{
 			{
 				Role:    "user",
-				Content: "You just need to output 'hi' next.",
+				Content: "hi",
 			},
 		},
 		Model:     "",
-		MaxTokens: 2,
+		MaxTokens: 1,
 		Stream:    false,
 	}
 	return testRequest

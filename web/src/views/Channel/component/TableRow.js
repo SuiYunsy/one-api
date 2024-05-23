@@ -324,14 +324,14 @@ export default function ChannelTableRow({ item, manageChannel, handleOpenModal, 
           编辑
         </MenuItem>
 
-        <MenuItem
+        {/* <MenuItem
           onClick={() => {
             handleCloseMenu();
             manageChannel(item.id, 'copy');
           }}
         >
           <IconCopy style={{ marginRight: '16px' }} /> 复制{' '}
-        </MenuItem>
+        </MenuItem> */}
         {CHANNEL_OPTIONS[item.type]?.url && (
           <MenuItem
             onClick={() => {
